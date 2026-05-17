@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<route_adjustment_report>
+  <generated_at>2026-04-04T14:35:00+03:00</generated_at>
+  <mission_id>MIS-2026-0404-001</mission_id>
+  <events>
+    <event>
+      <event_type>Обход препятствия</event_type>
+      <description>Смещение сегмента на +40 м по правому борту, причина: обновление NOTAM.</description>
+      <occurred_at>2026-04-04T14:32:08+03:00</occurred_at>
+    </event>
+    <event>
+      <event_type>Изменение высоты</event_type>
+      <description>Участок 3: эшелон +15 м из-за порывов ветра по METAR.</description>
+      <occurred_at>2026-04-04T14:28:51+03:00</occurred_at>
+    </event>
+  </events>
+</route_adjustment_report>

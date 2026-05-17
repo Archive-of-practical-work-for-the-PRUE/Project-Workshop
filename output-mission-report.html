@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Отчёт о выполнении миссии</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <h1>Планирование миссии</h1>
+      </div>
+      <nav class="nav-section">
+        <div class="nav-section__title">Входы</div>
+        <a href="input-mission-request.html">Заявка на миссию</a>
+        <a href="input-cartography.html">Картографические данные</a>
+        <a href="input-weather.html">Погодные данные</a>
+        <a href="input-waypoints.html">Геоданные и точки</a>
+      </nav>
+      <nav class="nav-section">
+        <div class="nav-section__title">Выходы</div>
+        <a href="output-mission-plan.html">План миссии</a>
+        <a href="output-route-adjustments.html">Корректировки маршрута</a>
+        <a href="output-mission-report.html" class="active">Отчёт о выполнении</a>
+        <a href="output-analytics.html">Аналитическая сводка</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <div class="page-header">
+        <h2>Отчёт о выполнении миссии</h2>
+      </div>
+      <div class="card">
+        <h3 class="card__title">Документ отчёта</h3>
+        <form class="form-grid form-grid--2">
+          <div>
+            <label for="rep-format">Формат</label>
+            <select id="rep-format" name="format">
+              <option>PDF</option>
+              <option>HTML</option>
+              <option>JSON</option>
+              <option>XML</option>
+            </select>
+          </div>
+          <div>
+            <label for="rep-id">Идентификатор (макет)</label>
+            <input type="text" id="rep-id" value="RPT-MIS-2026-0404-001" readonly style="opacity: 0.85" />
+          </div>
+          <div style="grid-column: 1 / -1">
+            <label for="rep-data">Данные отчёта</label>
+            <textarea id="rep-data" name="report_data" placeholder="Телеметрия, отклонения от плана, время по этапам, события…"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="card">
+        <h3 class="card__title">Краткая сводка (макет превью)</h3>
+        <table class="attr-table">
+          <tbody>
+            <tr><th>Миссия</th><td>—</td></tr>
+            <tr><th>Факт vs план</th><td>—</td></tr>
+            <tr><th>Критические события</th><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary">Сформировать отчёт</button>
+        <a class="btn btn-ghost" href="index.html">На обзор</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

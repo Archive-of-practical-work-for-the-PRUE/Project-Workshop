@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Картографические данные</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="sidebar__brand">
+          <h1>Планирование миссии</h1>
+        </div>
+        <nav class="nav-section">
+          <div class="nav-section__title">Входы</div>
+          <a href="input-mission-request.html">Заявка на миссию</a>
+          <a href="input-cartography.html" class="active"
+            >Картографические данные</a
+          >
+          <a href="input-weather.html">Погодные данные</a>
+          <a href="input-waypoints.html">Геоданные и точки</a>
+        </nav>
+        <nav class="nav-section">
+          <div class="nav-section__title">Выходы</div>
+          <a href="output-mission-plan.html">План миссии</a>
+          <a href="output-route-adjustments.html">Корректировки маршрута</a>
+          <a href="output-mission-report.html">Отчёт о выполнении</a>
+          <a href="output-analytics.html">Аналитическая сводка</a>
+        </nav>
+      </aside>
+      <main class="main">
+        <div class="page-header">
+          <h2>Картографические данные</h2>
+        </div>
+        <div class="card">
+          <h3 class="card__title">Операционная карта</h3>
+          <form class="form-grid form-grid--2">
+            <div>
+              <label for="map-name">Название</label>
+              <input
+                type="text"
+                id="map-name"
+                name="map_name"
+                placeholder="Напр. Sector-7B orthophoto"
+              />
+            </div>
+            <div>
+              <label for="crs">Система координат</label>
+              <select id="crs" name="coordinate_system">
+                <option value="">Выберите СК…</option>
+                <option>WGS 84 / EPSG:4326</option>
+                <option>UTM Zone 37N / EPSG:32637</option>
+                <option>МСК (локальная)</option>
+              </select>
+            </div>
+            <div style="grid-column: 1 / -1">
+              <label for="bounds">Границы области</label>
+              <textarea
+                id="bounds"
+                name="bounds"
+                placeholder="WKT, bbox (minLon,minLat,maxLon,maxLat) или полигон…"
+              ></textarea>
+            </div>
+          </form>
+          <div class="btn-row">
+            <button type="button" class="btn btn-primary">
+              Загрузить / привязать карту
+            </button>
+            <a class="btn btn-ghost" href="index.html">На обзор</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card__title">Предпросмотр области (макет)</h3>
+          <div class="map-placeholder">
+            Область карты · границы из поля выше
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Аналитическая сводка по эффективности маршрутов</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <h1>Планирование миссии</h1>
+      </div>
+      <nav class="nav-section">
+        <div class="nav-section__title">Входы</div>
+        <a href="input-mission-request.html">Заявка на миссию</a>
+        <a href="input-cartography.html">Картографические данные</a>
+        <a href="input-weather.html">Погодные данные</a>
+        <a href="input-waypoints.html">Геоданные и точки</a>
+      </nav>
+      <nav class="nav-section">
+        <div class="nav-section__title">Выходы</div>
+        <a href="output-mission-plan.html">План миссии</a>
+        <a href="output-route-adjustments.html">Корректировки маршрута</a>
+        <a href="output-mission-report.html">Отчёт о выполнении</a>
+        <a href="output-analytics.html" class="active">Аналитическая сводка</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <div class="page-header">
+        <h2>Аналитическая сводка по эффективности маршрутов</h2>
+      </div>
+      <div class="card">
+        <h3 class="card__title">Сводный отчёт</h3>
+        <div class="chart-placeholder">Диаграмма: длина пути, время, расход, число корректировок…</div>
+        <div style="margin-top: 1rem">
+          <label for="analytics-payload">Данные отчёта (структурированное тело)</label>
+          <textarea id="analytics-payload" name="report_data" style="min-height: 140px" placeholder='JSON: {"avg_route_efficiency":0.87,"missions_compared":24,"top_deviation_causes":["weather","notam"]}…'></textarea>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card__title">Таблица сравнения маршрутов (макет)</h3>
+        <table class="attr-table">
+          <thead>
+            <tr><th>Маршрут</th><th>Эффективность</th><th>Корректировок</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>—</td><td>—</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary">Выгрузить сводку</button>
+        <a class="btn btn-ghost" href="index.html">На обзор</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

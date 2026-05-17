@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mission_request>
+  <name>PATROL-NORTH-042</name>
+  <description>Патрулирование северного сектора. Ограничение: без снижения ниже 150 м над рельефом в зоне B.</description>
+  <planned_start>2026-04-05T08:00:00+03:00</planned_start>
+  <planned_end>2026-04-05T11:30:00+03:00</planned_end>
+</mission_request>

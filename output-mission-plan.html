@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>План миссии с визуализацией маршрута</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <h1>Планирование миссии</h1>
+      </div>
+      <nav class="nav-section">
+        <div class="nav-section__title">Входы</div>
+        <a href="input-mission-request.html">Заявка на миссию</a>
+        <a href="input-cartography.html">Картографические данные</a>
+        <a href="input-weather.html">Погодные данные</a>
+        <a href="input-waypoints.html">Геоданные и точки</a>
+      </nav>
+      <nav class="nav-section">
+        <div class="nav-section__title">Выходы</div>
+        <a href="output-mission-plan.html" class="active">План миссии</a>
+        <a href="output-route-adjustments.html">Корректировки маршрута</a>
+        <a href="output-mission-report.html">Отчёт о выполнении</a>
+        <a href="output-analytics.html">Аналитическая сводка</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <div class="page-header">
+        <h2>План миссии с визуализацией маршрута</h2>
+      </div>
+      <div class="card">
+        <h3 class="card__title">Состояние миссии и отображение</h3>
+        <form class="form-grid form-grid--2">
+          <div>
+            <label for="ms-status">Статус</label>
+            <select id="ms-status" name="status">
+              <option>Черновик</option>
+              <option>Согласовано</option>
+              <option>К исполнению</option>
+              <option>Выполнено</option>
+            </select>
+          </div>
+          <div>
+            <label for="map-params">Параметры отображения на карте</label>
+            <input type="text" id="map-params" name="map_display_params" placeholder="Слои, масштаб, 2D/3D, подсветка коридора…" />
+          </div>
+        </form>
+      </div>
+      <div class="card">
+        <h3 class="card__title">Визуализация маршрута (макет 2D/3D)</h3>
+        <div class="map-placeholder">Маршрут по операционной карте · параметры из поля выше</div>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary">Экспорт плана</button>
+        <a class="btn btn-ghost" href="index.html">На обзор</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

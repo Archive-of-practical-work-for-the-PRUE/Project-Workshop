@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Корректировки маршрута</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <h1>Планирование миссии</h1>
+      </div>
+      <nav class="nav-section">
+        <div class="nav-section__title">Входы</div>
+        <a href="input-mission-request.html">Заявка на миссию</a>
+        <a href="input-cartography.html">Картографические данные</a>
+        <a href="input-weather.html">Погодные данные</a>
+        <a href="input-waypoints.html">Геоданные и точки</a>
+      </nav>
+      <nav class="nav-section">
+        <div class="nav-section__title">Выходы</div>
+        <a href="output-mission-plan.html">План миссии</a>
+        <a href="output-route-adjustments.html" class="active">Корректировки маршрута</a>
+        <a href="output-mission-report.html">Отчёт о выполнении</a>
+        <a href="output-analytics.html">Аналитическая сводка</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <div class="page-header">
+        <h2>Отчёт о корректировке маршрута в реальном времени</h2>
+      </div>
+      <div class="card">
+        <h3 class="card__title">Лента событий корректировки</h3>
+        <div class="timeline">
+          <div class="timeline__item">
+            <div class="timeline__time">2026-04-04 14:32:08</div>
+            <div class="timeline__type">Обход препятствия</div>
+            <p class="timeline__desc">Смещение сегмента на +40 м по правому борту, причина: обновление NOTAM.</p>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__time">2026-04-04 14:28:51</div>
+            <div class="timeline__type">Изменение высоты</div>
+            <p class="timeline__desc">Участок 3: эшелон +15 м из-за порывов ветра по METAR.</p>
+          </div>
+        </div>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary">Экспорт ленты (PDF/JSON)</button>
+        <a class="btn btn-ghost" href="index.html">На обзор</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
