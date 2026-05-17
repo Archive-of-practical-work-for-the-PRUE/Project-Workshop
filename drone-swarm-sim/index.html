@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Симулятор Роевого Интеллекта Дронов</title>
+  <!-- Подключение внешнего файла стилей -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <div class="fps-counter" id="fps">FPS: 0</div>
+  
+  <button class="toggle-panel-btn" id="toggleBtn">⚙️</button>
+  
+  <div class="control-panel" id="controlPanel">
+    <button class="close-panel-btn" id="closeBtn">✕</button>
+      <h1>Параметры Роя</h1>
+      
+      <div class="section-title">Основные</div>
+      
+      <div class="control-group">
+        <div class="control-label">
+          <span>Количество дронов</span>
+          <span class="control-value" id="droneCountValue">50</span>
+        </div>
+        <input type="range" id="droneCount" min="10" max="200" value="50" step="1">
+      </div>
+
+      <div class="control-group">
+        <div class="control-label">
+          <span>Макс. скорость</span>
+          <span class="control-value" id="maxSpeedValue">4.0</span>
+        </div>
+        <input type="range" id="maxSpeed" min="1" max="10" value="4" step="0.5">
+      </div>
+
+      <div class="control-group">
+        <div class="control-label">
+          <span>Радиус восприятия</span>
+          <span class="control-value" id="perceptionRadiusValue">50</span>
+        </div>
+        <input type="range" id="perceptionRadius" min="20" max="200" value="50" step="5">
+      </div>
+
+      <div class="section-title">Поведение</div>
+
+      <div class="control-group">
+        <div class="control-label">
+          <span>Разделение</span>
+          <span class="control-value" id="separationWeightValue">1.5</span>
+        </div>
+        <input type="range" id="separationWeight" min="0" max="5" value="1.5" step="0.1">
+      </div>
+
+      <div class="control-group">
+        <div class="control-label">
+          <span>Выравнивание</span>
+          <span class="control-value" id="alignmentWeightValue">1.0</span>
+        </div>
+        <input type="range" id="alignmentWeight" min="0" max="5" value="1.0" step="0.1">
+      </div>
+
+      <div class="control-group">
+        <div class="control-label">
+          <span>Сплочённость</span>
+          <span class="control-value" id="cohesionWeightValue">1.0</span>
+        </div>
+        <input type="range" id="cohesionWeight" min="0" max="5" value="1.0" step="0.1">
+      </div>
+
+      <div class="control-group">
+        <div class="control-label">
+          <span>Притяжение к курсору</span>
+          <span class="control-value" id="mouseAttractionValue">2.0</span>
+        </div>
+        <input type="range" id="mouseAttraction" min="0" max="10" value="2" step="0.5">
+      </div>
+
+      <div class="section-title">Визуализация</div>
+
+      <div class="control-group">
+        <div class="control-label">
+          <span>Размер дрона</span>
+          <span class="control-value" id="droneSizeValue">4</span>
+        </div>
+        <input type="range" id="droneSize" min="2" max="10" value="4" step="1">
+      </div>
+
+      <div class="control-group">
+        <div class="control-label">
+          <span>Длина следа</span>
+          <span class="control-value" id="trailLengthValue">20</span>
+        </div>
+        <input type="range" id="trailLength" min="0" max="50" value="20" step="5">
+      </div>
+
+      <button class="btn btn-reset" id="resetBtn">Сбросить параметры</button>
+  </div>
+
+  <!-- Подключение внешнего файла скриптов -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,10 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Заявка на миссию</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Погодные данные</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
   <body>
     <div class="layout">
@@ -14,11 +14,9 @@
         </div>
         <nav class="nav-section">
           <div class="nav-section__title">Входы</div>
-          <a href="input-mission-request.html" class="active"
-            >Заявка на миссию</a
-          >
+          <a href="input-mission-request.html">Заявка на миссию</a>
           <a href="input-cartography.html">Картографические данные</a>
-          <a href="input-weather.html">Погодные данные</a>
+          <a href="input-weather.html" class="active">Погодные данные</a>
           <a href="input-waypoints.html">Геоданные и точки</a>
         </nav>
         <nav class="nav-section">
@@ -31,43 +29,39 @@
       </aside>
       <main class="main">
         <div class="page-header">
-          <h2>Заявка на миссию</h2>
+          <h2>Погодные данные</h2>
         </div>
         <div class="card">
-          <h3 class="card__title">Реквизиты миссии</h3>
+          <h3 class="card__title">Запись погодного события</h3>
           <form class="form-grid form-grid--2">
             <div>
-              <label for="m-name">Название</label>
-              <input
-                type="text"
-                id="m-name"
-                name="name"
-                placeholder="Напр. PATROL-NORTH-042"
-              />
+              <label for="evt-type">Тип события</label>
+              <select id="evt-type" name="event_type">
+                <option value="">Выберите тип…</option>
+                <option>Метеосводка METAR</option>
+                <option>Метеосводка TAF</option>
+                <option>Предупреждение о ветре</option>
+                <option>Осадки / видимость</option>
+              </select>
             </div>
-            <div></div>
+            <div>
+              <label for="evt-ts">Временная метка события</label>
+              <input type="datetime-local" id="evt-ts" name="event_timestamp" />
+            </div>
             <div style="grid-column: 1 / -1">
-              <label for="m-desc">Описание</label>
+              <label for="evt-extra">Дополнительные данные</label>
               <textarea
-                id="m-desc"
-                name="description"
-                placeholder="Цели, ограничения, примечания…"
+                id="evt-extra"
+                name="extra_data"
+                placeholder='Сырой текст, JSON: {"wind_kt":12,"visibility_m":8000}…'
               ></textarea>
-            </div>
-            <div>
-              <label for="m-start">Плановое время начала</label>
-              <input type="datetime-local" id="m-start" name="planned_start" />
-            </div>
-            <div>
-              <label for="m-end">Плановое время окончания</label>
-              <input type="datetime-local" id="m-end" name="planned_end" />
             </div>
           </form>
           <div class="btn-row">
             <button type="button" class="btn btn-primary">
-              Отправить заявку
+              Добавить в ленту погоды
             </button>
-            <a class="btn btn-ghost" href="index.html">На обзор</a>
+            <a class="btn btn-ghost" href="../index.html">На обзор</a>
           </div>
         </div>
       </main>
