@@ -121,6 +121,12 @@ a:hover {
   max-width: 960px;
 }
 
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
 .page-header {
   margin-bottom: 1.75rem;
 }
